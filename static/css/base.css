@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.account-form-container{
+    margin: auto;
+    width: 300px;
+    align-items: center;
+}
+.account-form-container input{
+    width: 100%;
+    font-size: 16px;
+}
+.account-button{
+ border: 1px solid black;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 16px;
+ text-decoration: none;
+ padding: 5px;
+ color: black;
+ border-radius: 5px;
+ background-color: lightgray;
+}
+.account-button:hover{
+    font-weight: bolder;
+    border: 2px solid black;
+    cursor: pointer;
+
+}

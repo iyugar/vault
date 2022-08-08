@@ -1,0 +1,21 @@
+<!doctype html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block style %}
+  {% endblock %}
+  <title>Budget App</title>
+</head>
+
+<body>
+  {% block content %}
+  {% endblock %}
+
+  {% block js %}
+  {% endblock %}
+</body>
+
+</html>
