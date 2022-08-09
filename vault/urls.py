@@ -29,5 +29,14 @@ urlpatterns = [
 
     path('accounts/', include('django.contrib.auth.urls')),
 
+    path('api-auth/', include('rest_framework.urls')),
+
+    path('api-auth/', include('dj_rest_auth.urls')),
+
+    # path('api/',include('api.urls')),
+
+    path('api/rest-auth/registration/',include('dj_rest_auth.registration.urls')),
+
+    # re_path(r'^.*$', IndexTemplateView.as_view(template_name='index.html'),name='entry-point')
 
 ]

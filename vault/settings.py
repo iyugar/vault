@@ -40,9 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    'rest_framework',
+    'rest_framework.authtoken',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
 
     'crispy_forms',
 
@@ -155,3 +161,14 @@ SITE_ID = 1
 # Django-allauth
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
+
+# Djanfo-REST-Framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}
