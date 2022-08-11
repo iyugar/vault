@@ -1,13 +1,16 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from notes.api.serializers import NoteSerializer
-from notes.models import Note
+from books.api.serializers import BookSerializer
+from books.models import Book
 
 
-class NoteViewSet(viewsets.ModelViewSet):
-    serializer_class = NoteSerializer
+class BookViewSet(viewsets.ModelViewSet):
+    serializer_class = BookSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Note.objects.filter(owner=self.request.user)
+        return Book.objects.filter(owner=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
