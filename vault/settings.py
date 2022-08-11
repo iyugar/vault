@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'notes.apps.NotesConfig',
+    'books.apps.BooksConfig',
 ]
 
 MIDDLEWARE = [
