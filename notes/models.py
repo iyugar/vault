@@ -24,3 +24,4 @@ class BookNote(Note):
     book = models.ForeignKey(Book,
                              on_delete=models.CASCADE,
                              related_name='bookNotes')
+    subtitle = models.CharField(max_length=255)
